@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('error-message');
     const loadingSpinner = document.getElementById('loading-spinner');
 
-    const FASTAPI_BACKEND_URL = "https://alogvision.onrender.com/explain/";
+    const FASTAPI_BACKEND_URL = "https://ai-algorithm-tutor-backend.onrender.com/explain/";
 
     const showLoading = () => {
         explainButton.disabled = true;
