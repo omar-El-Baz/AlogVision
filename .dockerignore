@@ -1,0 +1,16 @@
+# Ignore .git directory
+.git
+
+# Ignore cache directories
+__pycache__
+*.pyc
+
+# Ignore virtual environment
+venv/
+.venv/
+
+# Ignore local .env file
+.env
+
+# Ignore tests
+tests/

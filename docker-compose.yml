@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .             # Build context is the project root
+      dockerfile: Dockerfile.backend # Use the specific backend Dockerfile
+    ports:
+      - "8000:8000"          # Map host port 8000 to container port 8000
+    environment:
+      # Passing Gemini API key to the backend container
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+
+  frontend:
+    build:
+      context: .             # Build context is the project root
+      dockerfile: Dockerfile.frontend # Use the specific frontend Dockerfile
+    ports:
+      - "8501:8501"          # Map host port 8501 to container port 8501
+    environment:
+     
+      FASTAPI_BACKEND_URL: http://backend:8000 # points to the backend service
+    depends_on:
+      
+      - backend
+      

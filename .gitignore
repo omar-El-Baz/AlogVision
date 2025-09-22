@@ -1,0 +1,38 @@
+# --- Environment ---
+# Ignore local environment variables.
+.env
+
+# --- Python Virtual Environment ---
+# Ignore the virtual environment directory.
+venv/
+.venv/
+
+# --- Python Artifacts ---
+# Ignore Python bytecode and cache folders.
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore distribution and build artifacts.
+build/
+dist/
+*.egg-info/
+*.egg
+
+# --- Testing ---
+# Ignore pytest cache.
+.pytest_cache/
+
+# --- Operating System ---
+# Ignore macOS-specific files.
+.DS_Store
+
+# --- IDEs and Editors ---
+# Ignore configurations for common editors.
+.vscode/
+.idea/
+
+# --- Logs ---
+# Ignore log files.
+*.log
