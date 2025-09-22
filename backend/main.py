@@ -24,7 +24,7 @@ app = FastAPI()
 origins = [
     "http://localhost:8501", 
     "http://127.0.0.0.1:8501",  
-    "https://ai-algorithm-tutor-frontend.onrender.com",
+    "https://alogvision.onrender.com",
 ]
 
 app.add_middleware(
