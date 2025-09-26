@@ -17,7 +17,7 @@ class TokenManager:
     Manages token counting, input validation, and intelligent, AST-based code chunking
     for Gemini models.
     """
-    def __init__(self, model_name: str = "gemini-1.5-flash-latest", max_tokens: int = 1_000_000):
+    def __init__(self, model_name: str = "gemini-1.5-pro-001", max_tokens: int = 1_000_000):
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             logging.error("GEMINI_API_KEY environment variable not set for TokenManager.")
