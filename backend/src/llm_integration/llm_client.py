@@ -16,7 +16,7 @@ class LLMClientError(Exception):
 
 class LLMClient:
     """A centralized client for interacting with the LLM API."""
-    def __init__(self, model_name: str = "gemini-1.5-flash-001"): 
+    def __init__(self, model_name: str = "gemini-2.5-flash"): 
         api_key = os.environ.get("GEMINI_API_KEY") 
         if not api_key:
             logging.error("GEMINI_API_KEY environment variable not set.")
