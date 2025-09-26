@@ -2,6 +2,7 @@ import ast
 import os
 import logging
 import google.generativeai as genai
+from fastapi import HTTPException
 from google.api_core.exceptions import GoogleAPIError
 from backend.src.utils.loggin_config import setup_logging
 
@@ -17,7 +18,7 @@ class TokenManager:
     Manages token counting, input validation, and intelligent, AST-based code chunking
     for Gemini models.
     """
-    def __init__(self, model_name: str = "gemini-1.5-pro-001", max_tokens: int = 1_000_000):
+    def __init__(self, model_name: str = "gemini-1.5-flash-001", max_tokens: int = 1_000_000):
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             logging.error("GEMINI_API_KEY environment variable not set for TokenManager.")
